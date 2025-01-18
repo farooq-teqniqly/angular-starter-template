@@ -11,8 +11,8 @@
   },
   "lint-staged": {
     "fe/**/*.{js,ts,json,css,scss,md}": [
-      "npm --prefix ./fe run format",
-      "npm --prefix ./fe run lint"
+      "npm --prefix ./todo run format",
+      "npm --prefix ./todo run lint"
     ]
   }
 }
