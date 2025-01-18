@@ -26,6 +26,7 @@ import { MatInput } from "@angular/material/input";
 import { MatButton } from "@angular/material/button";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
+import { MatSlideToggle } from "@angular/material/slide-toggle";
 
 @Component({
   selector: "app-root",
@@ -51,6 +52,7 @@ import { MatInputModule } from "@angular/material/input";
     MatButton,
     MatFormFieldModule,
     MatInputModule,
+    MatSlideToggle,
   ],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.css",
@@ -62,6 +64,8 @@ export class AppComponent {
     new TodoItem("Collect tickets"),
   ]);
 
+  showComplete = false;
+
   get username(): string {
     return this.list.user;
   }
@@ -71,7 +75,9 @@ export class AppComponent {
   }
 
   get items(): readonly TodoItem[] {
-    return [...this.list.items];
+    return this.list.items.filter(
+      (item) => this.showComplete || !item.complete
+    );
   }
 
   addItem(task: string) {

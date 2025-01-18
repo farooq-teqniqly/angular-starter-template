@@ -18,3 +18,8 @@
 .strikethrough {
   text-decoration: line-through;
 }
+
+.toggleContainer {
+  margin: 15px;
+  display: flex;
+}
