@@ -1,6 +1,7 @@
 // noinspection AngularUnusedComponentImport
 
 import { Component } from "@angular/core";
+import { CommonModule } from "@angular/common";
 import { TodoList } from "./todoList";
 import { TodoItem } from "./todoItem";
 import { MatToolbar } from "@angular/material/toolbar";
@@ -29,6 +30,7 @@ import { MatInputModule } from "@angular/material/input";
 @Component({
   selector: "app-root",
   imports: [
+    CommonModule,
     MatToolbar,
     MatIcon,
     MatBadge,
@@ -69,7 +71,7 @@ export class AppComponent {
   }
 
   get items(): readonly TodoItem[] {
-    return this.list.items.filter((item) => !item.complete);
+    return [...this.list.items];
   }
 
   addItem(task: string) {
