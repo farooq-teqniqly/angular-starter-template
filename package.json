@@ -10,7 +10,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "fe/**/*.{js,ts,json,css,scss,md}": [
+    "todo/**/*.{js,ts,json,css,scss,md}": [
       "npm --prefix ./todo run format",
       "npm --prefix ./todo run lint"
     ]
