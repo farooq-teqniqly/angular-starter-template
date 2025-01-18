@@ -1,3 +1,5 @@
+// noinspection AngularUnusedComponentImport
+
 import { Component } from "@angular/core";
 import { TodoList } from "./todoList";
 import { TodoItem } from "./todoItem";
