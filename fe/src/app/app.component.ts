@@ -18,6 +18,8 @@ import {
   MatRowDef,
   MatTable,
 } from "@angular/material/table";
+import { MatCheckbox } from "@angular/material/checkbox";
+import { FormsModule } from "@angular/forms";
 
 @Component({
   selector: "app-root",
@@ -35,6 +37,8 @@ import {
     MatHeaderRowDef,
     MatRow,
     MatRowDef,
+    MatCheckbox,
+    FormsModule,
   ],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.css",
@@ -55,6 +59,6 @@ export class AppComponent {
   }
 
   get items(): readonly TodoItem[] {
-    return this.list.items;
+    return this.list.items.filter((item) => !item.complete);
   }
 }
