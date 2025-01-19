@@ -12,7 +12,9 @@
   "lint-staged": {
     "todo/**/*.{js,ts,json,css,scss,md}": [
       "npm --prefix ./todo run format",
-      "npm --prefix ./todo run lint",
+      "npm --prefix ./todo run lint"
+    ],
+    "sportsstore/**/*.{js,ts,json,css,scss,md}": [
       "npm --prefix ./sportsstore run format",
       "npm --prefix ./sportsstore run lint"
     ]
